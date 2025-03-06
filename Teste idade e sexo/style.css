@@ -1,0 +1,42 @@
+body {
+    background-color: #3E84D6;
+    font: sans-serif normal 15px;
+    color: white;
+}
+.header__text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.section {
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: 18px;
+    color: black;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.363);
+}
+div {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#ano-nascimento {
+    height: 5px;
+}
+[type="button"] {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    width: 100px;
+}
+#img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
