@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body{
+            font: normal 18px arial;
+        }
+        input {
+            width: 100px;
+            font: 18px normal arial;
+        }
+        #txtn1 {
+            margin-right: 1rem;
+        }
+        #txtn2 {
+            margin-left: 1rem;
+        }
+        #res {
+            margin-top: 1rem;
+        }
+        [type="button"] {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+            const txtn1 = document.getElementById('txtn1')
+            const txtn2 = document.getElementById('txtn2')
+            const res = document.getElementById('res')
+
+            /* Aqui com o Number, converte para número o que é digitado nos inputs que por padrão são STRING */
+            const n1 = Number(txtn1.value)
+            const n2 = Number(txtn2.value)
+            const soma = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${soma}</strong>`
+        }
+
+    </script>
+</body>
+</html>
