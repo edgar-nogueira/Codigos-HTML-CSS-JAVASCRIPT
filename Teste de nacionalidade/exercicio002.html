@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 18px arial;
+        }
+        input {
+            width: 150x;
+            font: 18px normal arial;
+        }
+        #nacionalidade {
+            margin-right: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    <input type="text" name="nacionalidade" id="nacionalidade" placeholder="Digite sua nacionalidade">
+    <input type="button" name="button" id="button" value="Verificar" onclick="testeNacionalidade()">
+    <p id="res">Resultado</p>
+
+    <script>
+        function testeNacionalidade(){
+            const nacionalidade = document.getElementById('nacionalidade')
+            const res = document.getElementById('res')
+
+            /*Mesma coisa do exercício001, porém aqui não precisamos usar o NUMBER para converter o campo do
+            input que já é STRING por padrão para formato numérico*/
+
+            n1 = nacionalidade.value
+            n2 = n1.toLowerCase()
+
+            res.innerHTML = `<p>Sua nacionalidade é: <strong>${n1}<strong/><p/>`
+
+            if(n2 === 'brasileiro'){
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong>.<p/>`
+            }
+            else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong>.<p/>`
+            }
+        }
+    </script>
+</body>
+</html>
