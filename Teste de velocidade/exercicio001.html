@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+    <style>
+        body{
+            font: normal 18px arial;
+        }
+        input {
+            width: 100px;
+            font: 18px normal arial;
+        }
+        #vel1 {
+            margin-right: 0.7rem;
+        }
+        [type="button"] {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Velocidade</h1>
+    <input type="number" name="vel1" id="vel1"> km/h
+    <input type="button" name="button" id="button"  value="Verificar" onclick="testeVelocidade()">
+    <p id="res">Resultado</p>
+
+
+    <script>
+        function testeVelocidade(){
+            const vel1 = document.getElementById('vel1')
+            const res = document.getElementById('res')
+
+            n1 = Number(vel1.value)
+
+            /* Aqui sempre coloca um = igual para receber primeiro o valor e depois sempre ir colocando
+            com o += para ir concatenando, pois caso seja o = igual, vai apagar os demais, então sempre
+            colocar o += para juntar com os demais, e a cada um iteração dessa, seja no primeiro INNERHTML ou 
+            nos demais IF/ELSE, sempre ir colocando um <p> para ir gerando os parágrafos para cada
+            possível resposta. Reparar também que colocamos um texto concatenando com a velocidade atual
+            digitada antes para amarrar essa velocidade com os IF/ELSE, pois sem, iria ficar solto e 
+            aparecer mensagens seguidas uma abaixo da outra */
+
+            res.innerHTML = `<p>A velocidade atual é de: <strong>${n1} km/h<strong/><p/>`
+            
+            if(n1 <= 0){
+                res.innerHTML = `<strong>Digite um valor válido<strong/>`
+            }
+            else if(n1 > 1 && n1 <= 60){
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança. Boa viajem!<p/>`
+                
+            }
+            else {
+                res.innerHTML += `<p>Você foi <strong>MULTADO!</strong> Velocidade superior a permitida.<p/>` 
+            }
+        }
+        
+    </script>
+</body>
+</html>
