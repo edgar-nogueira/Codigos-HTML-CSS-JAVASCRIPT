@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+            <h1>Tabuada</h1>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section__text">
+            <form>
+                <div id="numero">
+                    <label><strong>Número:</strong></label>
+                    <input type="number" name="txtini" id="txtn">
+                </div>
+            </form>
+        </div>
+        <div class="section__button">
+            <input type="button" name="button" id="button" value="Gerar Tabuada" onclick="tabuada()">
+        </div>
+        <div class="section__final">
+            <select name="tabuada" id="seltab" size="10"> <!--size="10" é o tamanho da caixa de seleção onde será exibida a tabuada que tem até 10 a tabuada.-->
+                <option value="option">Digite um número no campo acima</option>
+            </select>
+        </div>
+        <div id="res" class="res">
+            <p><strong>Preparando a tabuada...</strong></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy José Edgar P Nogueira</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
