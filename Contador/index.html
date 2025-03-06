@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+            <h1>Vamos contar</h1>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section__text">
+            <form>
+                <div id="inicio">
+                    <label><strong>Início:</strong></label>
+                    <input type="number" name="txtini" id="txtini">
+                </div>
+                <div id="fim">
+                    <label><strong>Fim:</strong></label>
+                    <input type="number" name="txtfim" id="txtfim">
+                </div>
+                <div id="passo">
+                    <label><strong>Passo:</strong></label>
+                    <input type="number" name="txtpasso" id="txtpasso">
+                </div>
+            </form>
+        </div>
+        <div class="section__button">
+            <input type="button" name="button" id="button" value="Contar" onclick="contar()">
+        </div>
+        <div id="res" class="res">
+            <p><strong>Preparando a contagem...</strong></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy José Edgar P Nogueira</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
